@@ -1,7 +1,7 @@
 // ─────────────────────────────────────────────
 // CONFIG — change this when you deploy to Render
 // ─────────────────────────────────────────────
-const API_URL = "http://localhost:8000";
+const API_URL = "https://aria-backend-mdge.onrender.com";
 
 // ─────────────────────────────────────────────
 // STATE
