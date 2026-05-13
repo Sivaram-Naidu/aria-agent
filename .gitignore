@@ -1,0 +1,18 @@
+# Virtual environment — never push this
+venv/
+
+# Environment variables — never push API keys!
+.env
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+
+# Whisper model cache — too large
+~/.cache/whisper/
+
+# System files
+.DS_Store
+*.log
