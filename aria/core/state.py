@@ -17,6 +17,25 @@ class ARIAState(TypedDict):
     
     # Raw user input (stored separately for emotion analysis)
     user_input: str
-    
+
     # ARIA's final response
     aria_response: str
+
+    # Short phrase describing what the user wants (from analyze_input)
+    intent: str
+
+    # How many turns into this conversation we are — drives onboarding
+    # (asking name / hobbies) deterministically instead of the model
+    # guessing from a truncated message window
+    turn_count: int
+
+    # User's name, once known — best-effort extracted in analyze_input
+    user_name: str
+
+    # Rolling summary of everything older than the live history window,
+    # so long conversations don't lose context once messages get trimmed
+    conversation_summary: str
+
+    # How many messages are already folded into conversation_summary —
+    # lets build_context only re-summarize newly-aged-out messages
+    summarized_through: int
